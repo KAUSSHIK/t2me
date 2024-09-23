@@ -80,11 +80,11 @@ load_dotenv()
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 # Load the model, embeddings, sentences, and FAISS index
-model = SentenceTransformer('all-MiniLM-L6-v2')
-embeddings = np.load('embeddings.npy')
-with open('sentences.txt', 'r', encoding='utf-8') as f:
-    sentences = [line.strip() for line in f]
-index = faiss.read_index('faiss_index.idx')
+# model = SentenceTransformer('all-MiniLM-L6-v2')
+# embeddings = np.load('embeddings.npy')
+# with open('sentences.txt', 'r', encoding='utf-8') as f:
+#     sentences = [line.strip() for line in f]
+# index = faiss.read_index('faiss_index.idx')
 
 app = FastAPI()
 
@@ -93,11 +93,11 @@ context_alternate = "Kausshik Manojkumar ♂phone+1 515-715-7861 /envel⌢pekaus
 class Message(BaseModel):
     question: str
 
-def retrieve_relevant_info(question, k=5):
-    question_embedding = model.encode([question])
-    distances, indices = index.search(np.array(question_embedding).astype('float32'), k)
-    retrieved_sentences = [sentences[idx] for idx in indices[0]]
-    return ' '.join(retrieved_sentences)
+# def retrieve_relevant_info(question, k=5):
+#     question_embedding = model.encode([question])
+#     distances, indices = index.search(np.array(question_embedding).astype('float32'), k)
+#     retrieved_sentences = [sentences[idx] for idx in indices[0]]
+#     return ' '.join(retrieved_sentences)
 
 def generate_response(question):
     #context = retrieve_relevant_info(question)

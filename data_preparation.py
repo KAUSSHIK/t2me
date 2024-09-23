@@ -17,13 +17,13 @@ def load_and_clean_text(file_path):
     text = text.strip()
     return text
 
-if __name__ == "__main__":
-    resume_text = load_and_clean_text('resume.pdf')
-    linkedin_text = load_and_clean_text('linkedin_resume.pdf')
+# if __name__ == "__main__":
+#     resume_text = load_and_clean_text('resume.pdf')
+#     linkedin_text = load_and_clean_text('linkedin_resume.pdf')
     
-    # Combine texts
-    combined_text = resume_text + " " + linkedin_text
+#     # Combine texts
+#     combined_text = resume_text + " " + linkedin_text
     
-    # Save the combined text
-    with open('combined_text.txt', 'w', encoding='utf-8') as file:
-        file.write(combined_text)
+#     # Save the combined text
+#     with open('combined_text.txt', 'w', encoding='utf-8') as file:
+#         file.write(combined_text)
