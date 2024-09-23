@@ -67,9 +67,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
-import faiss
-import numpy as np
-from sentence_transformers import SentenceTransformer
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
