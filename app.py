@@ -44,7 +44,7 @@ def display_messages():
                 st.markdown(f'<div class="chat-message bot"><div class="message">🤖 Assistant: {message["content"]}</div></div>', unsafe_allow_html=True)
 
 async def send_message(question):
-    url = 'http://localhost:8000/chat'  # Replace with your backend URL when deployed
+    url = 'https://t2me-be-5523b55adae3.herokuapp.com/chat'  # Replace with your backend URL when deployed
     async with aiohttp.ClientSession() as session:
         async with session.post(url, json={'question': question}) as resp:
             data = await resp.json()

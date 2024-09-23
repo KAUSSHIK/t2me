@@ -68,10 +68,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 import os
-from dotenv import load_dotenv
 from openai import OpenAI
-
-load_dotenv()
 
 # Load environment variables or set your OpenAI API key here
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
