@@ -83,7 +83,3 @@ For detailed deployment instructions, refer to the Heroku documentation.
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-[Specify your license here]
